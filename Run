@@ -1,0 +1,16 @@
+def stopWords(text, k):
+    count = {}
+    x=text.split()
+    for i in x:
+        if not i in count :
+            count[i] = 1
+        else :
+            count[i] +=1
+
+            
+    for l in count:
+        if 2<=count[l]<=k:
+            print(f" {l} : {count[l]}")
+    
+
+stopWords("my name is nahid ferdous, nahid  from bangladesh.My hoby is running ", 3)
